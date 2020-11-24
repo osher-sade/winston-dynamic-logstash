@@ -1,0 +1,37 @@
+{
+  "name": "winston-dynamic-logstash-transport",
+  "version": "1.0.0",
+  "description": "Winston's logstash transport with dynamic protocol support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osher-sade/winston-dynamic-logstash-transport.git"
+  },
+  "keywords": [
+    "typescript",
+    "logstash",
+    "winston"
+  ],
+  "author": "Osher Sade <osher.sade@gmail.com> (http://github.com/osher-sade)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osher-sade/winston-dynamic-logstash-transport/issues"
+  },
+  "homepage": "https://github.com/osher-sade/winston-dynamic-logstash-transport#readme",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "logform": "^2.2.0",
+    "winston": "^3.3.3",
+    "winston-transport": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/node": "^14.14.9",
+    "typescript": "^4.1.2"
+  }
+}
