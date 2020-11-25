@@ -1,6 +1,6 @@
 {
   "name": "winston-dynamic-logstash-transport",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Winston's logstash transport with dynamic protocol support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/osher-sade/winston-dynamic-logstash-transport#readme",
   "dependencies": {
-    "logform": "^2.2.0",
     "winston": "^3.3.3",
     "winston-transport": "^4.4.0"
   },
