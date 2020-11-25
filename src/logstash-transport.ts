@@ -61,6 +61,9 @@ export class LogstashTransport extends Transport {
 
     private connectUDP() {
         const udpClient = dgram.createSocket("udp4");
+        udpClient.on("error", (error) => {
+            console.error("%o", error);
+        });
         udpClient.unref();
         return udpClient;
     }
@@ -82,7 +85,7 @@ export class LogstashTransport extends Transport {
                 resolve(tcpClient);
             };
 
-            tcpClient.on("error", errorListener)
+            tcpClient.on("error", errorListener);
             tcpClient.on("connect", connectListener);
             tcpClient.on("close", () => {
                 console.info("TCP connection to %s:%d has been closed.", this.host, this.port);
