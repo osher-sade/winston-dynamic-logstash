@@ -97,10 +97,10 @@ export class LogstashTransport extends Transport {
     private async sendUDP(buf: Buffer, callback: any) {
         const udpClient: dgram.Socket = (await this.connect("udp")) as dgram.Socket;
         udpClient.send(buf, 0, buf.length, this.port, this.host, (error, bytes) => {
+            udpClient.close();
             if (callback) {
                 callback(error, bytes);
             }
-            udpClient.close();
         });
     }
 
