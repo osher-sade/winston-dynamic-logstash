@@ -100,6 +100,7 @@ export class LogstashTransport extends Transport {
             if (callback) {
                 callback(error, bytes);
             }
+            udpClient.close();
         });
     }
 
