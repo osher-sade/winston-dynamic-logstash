@@ -80,7 +80,7 @@ export class LogstashTransport extends Transport {
             }
 
             const connectListener = () => {
-                console.info("TCP connection to %s:%d has been established.", this.host, this.port);
+                console.debug("TCP connection to %s:%d has been established.", this.host, this.port);
                 tcpClient.removeListener("connect", connectListener);
                 resolve(tcpClient);
             };
@@ -88,7 +88,7 @@ export class LogstashTransport extends Transport {
             tcpClient.on("error", errorListener);
             tcpClient.on("connect", connectListener);
             tcpClient.on("close", () => {
-                console.info("TCP connection to %s:%d has been closed.", this.host, this.port);
+                console.debug("TCP connection to %s:%d has been closed.", this.host, this.port);
             });
             tcpClient.connect(this.port, this.host);
         });
